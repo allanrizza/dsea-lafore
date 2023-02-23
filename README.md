@@ -45,6 +45,13 @@ public class Array {
         }
         System.out.println("\n");
     }
+        
+    public boolean isSorted() {
+        for(int i = 0; i < this.getValues().length-1; i++) {
+            if(this.getValues()[i+1] < this.getValues()[i]) return false;
+        }
+        return true;
+    }
 }
 ```
 
