@@ -1,3 +1,4 @@
+import algorithms.BinarySearch;
 import algorithms.BubbleSort;
 import datastructures.Array;
 import utils.DisplayUtils;
@@ -15,5 +16,12 @@ public class Application {
         System.out.println("SORTED ARRAY AFTER BUBBLE SORT ALGORITHM (algorithm with complexity "+ bubbleSort.getComplexity() +"):");
         array.display();
         DisplayUtils.displayEndAlgorithm(bubbleSort);
+
+        BinarySearch binarySearch = new BinarySearch();
+        DisplayUtils.displayStartAlgorithm(binarySearch);
+        array.display();
+
+        System.out.println(BinarySearch.find(array, 4));
+        DisplayUtils.displayEndAlgorithm(binarySearch);
     }
 }
