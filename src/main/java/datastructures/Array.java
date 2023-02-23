@@ -1,9 +1,17 @@
 package datastructures;
 
 public class Array {
-    public int[] values;
+    private int[] values;
 
     public Array(int[] values) {
+        this.values = values;
+    }
+
+    public int[] getValues() {
+        return values;
+    }
+
+    public void setValues(int[] values) {
         this.values = values;
     }
 
