@@ -22,6 +22,7 @@ public class BinarySearch extends Algorithm {
      * @return Returns the array position of the number, if found. Otherwise, it returns {@code -1}.
      */
     public static int find(Array array, int value) {
+        if(!array.isSorted()) throw new IllegalArgumentException();
         int curIn;
         int lowerBound = 0;
         int upperBound = array.getValues().length-1;
