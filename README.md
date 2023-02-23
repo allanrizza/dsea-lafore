@@ -19,7 +19,7 @@ The project was created using Intellij IDEA Ultimate as IDE, Maven as build tool
 
 <hr>
 
-## Example
+## Examples
 
 - #### Array (Data Structure)
 
