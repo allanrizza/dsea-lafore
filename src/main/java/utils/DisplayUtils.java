@@ -8,6 +8,6 @@ public class DisplayUtils {
     }
 
     public static void displayEndAlgorithm(Algorithm algorithm) {
-        System.out.println("================================== END " + algorithm.getName() + " =======================================");
+        System.out.println("================================== END " + algorithm.getName() + " =======================================\n\n\n");
     }
 }
