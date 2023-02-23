@@ -2,7 +2,7 @@
 ## Data Structures and Algorithms (DS&A) in Java
 #### This is a simple project for educational purposes of teaching data structures and algorithms in java based on Robert Lafore's Book "Data Structures and Algorithms in Java - 2nd Edition".
 
-<div style="text-align: center">
+<div align="center">
   <img src="https://m.media-amazon.com/images/I/41W+LyRF6NL.jpg" alt="Data Structures & Algorithms in Java - Robert Lafore (book image)"/>
 </div>
 
