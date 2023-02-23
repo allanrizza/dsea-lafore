@@ -3,13 +3,24 @@ package algorithms;
 import algorithms.enums.ComplexityEnum;
 import datastructures.Array;
 
+/**
+ * The binary search algorithm to sorted arrays.
+ * @author Allan G. Rizza
+ */
 public class BinarySearch extends Algorithm {
-
+    /**
+     * Creates an BinarySearch object with your respective name and complexity.
+     */
     public BinarySearch() {
         this.setName("BINARY SEARCH");
         this.setComplexity(ComplexityEnum.ON);
     }
 
+    /**
+     * @param array The array where need to find the value.
+     * @param value the value to be sought.
+     * @return Returns the array position of the number, if found. Otherwise, it returns {@code -1}.
+     */
     public static int find(Array array, int value) {
         int curIn;
         int lowerBound = 0;

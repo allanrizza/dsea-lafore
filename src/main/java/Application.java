@@ -3,6 +3,9 @@ import algorithms.BubbleSort;
 import datastructures.Array;
 import utils.DisplayUtils;
 
+/**
+ * @author Allan G. Rizza
+ */
 public class Application {
     public static void main(String[] args) {
         Array array = new Array(new int[]{5, 2, 4, 6, 1, 3});
