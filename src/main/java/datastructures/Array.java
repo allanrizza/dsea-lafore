@@ -30,4 +30,15 @@ public class Array {
         }
         System.out.println("\n");
     }
+
+    /**
+     * Verify if the array is sorted.
+     * @return Returns {@code false} if the array is not sorted. Otherwise, returns {@code true}.
+     */
+    public boolean isSorted() {
+        for(int i = 0; i < this.getValues().length-1; i++) {
+            if(this.getValues()[i+1] < this.getValues()[i]) return false;
+        }
+        return true;
+    }
 }
