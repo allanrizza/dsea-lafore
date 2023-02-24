@@ -6,17 +6,17 @@ import datastructures.Array;
 /**
  * @author Allan G. Rizza
  */
-public class InsertionSort extends Algorithm {
+public class SelectionSort extends Algorithm {
     /**
      * Creates an InsertionSort object with your respective name and complexity.
      */
-    public InsertionSort() {
-        this.setName("INSERTION SORT");
+    public SelectionSort() {
+        this.setName("SELECTION SORT");
         this.setComplexity(ComplexityEnum.ON2);
     }
 
     /**
-     * Sorts the array passed as a parameter with the Insertion Sort algorithm.
+     * Sorts the array passed as a parameter with the Selection Sort algorithm.
      * @param array The array to be sorted.
      */
     public static void sort(Array array) {
