@@ -25,7 +25,8 @@ public class Application {
         DisplayUtils.displayStartAlgorithm(binarySearch);
         array.display();
 
-        System.out.println(BinarySearch.find(array, 4));
+        System.out.println(binarySearch.find(array, 4));
+        System.out.println(binarySearch.getInfo().toString());
         DisplayUtils.displayEndAlgorithm(binarySearch);
 
         array = new Array(new int[]{5, 2, 4, 6, 1, 3});

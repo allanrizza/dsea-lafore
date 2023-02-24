@@ -1,6 +1,7 @@
 package algorithms;
 
 import algorithms.enums.ComplexityEnum;
+import algorithms.enums.InfoTypeEnum;
 import datastructures.Array;
 
 /**
@@ -14,6 +15,8 @@ public class BinarySearch extends Algorithm {
     public BinarySearch() {
         this.setName("BINARY SEARCH");
         this.setComplexity(ComplexityEnum.ON);
+        this.getInfo().put(InfoTypeEnum.COMPARISONS, 0L);
+        this.getInfo().put(InfoTypeEnum.EXECUTION_TIME, 0L);
     }
 
     /**
@@ -21,7 +24,7 @@ public class BinarySearch extends Algorithm {
      * @param value the value to be sought.
      * @return Returns the array position of the number, if found. Otherwise, it returns {@code -1}.
      */
-    public static int find(Array array, int value) {
+    public int find(Array array, int value) {
         if(!array.isSorted()) throw new IllegalArgumentException();
         int curIn;
         int lowerBound = 0;
@@ -29,17 +32,21 @@ public class BinarySearch extends Algorithm {
         while(true) {
             curIn = (upperBound + lowerBound) /2;
             if(array.getValues()[curIn] == value) {
+                this.incrementInfo(InfoTypeEnum.COMPARISONS);
                 System.out.println("VALUE FOUND AT POSITION " + curIn);
                 return value;
             }
             if(lowerBound > upperBound) {
+                this.incrementInfo(InfoTypeEnum.COMPARISONS);
                 System.out.println("VALUE NOT FOUND.");
                 return -1;
             }
             if(value < array.getValues()[curIn]) {
+                this.incrementInfo(InfoTypeEnum.COMPARISONS);
                 upperBound = curIn-1;
             }
             else {
+                this.incrementInfo(InfoTypeEnum.COMPARISONS);
                lowerBound = curIn+1;
             }
         }
