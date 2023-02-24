@@ -1,5 +1,6 @@
 import algorithms.BinarySearch;
 import algorithms.BubbleSort;
+import algorithms.InsertionSort;
 import datastructures.Array;
 import utils.DisplayUtils;
 
@@ -26,5 +27,18 @@ public class Application {
 
         System.out.println(BinarySearch.find(array, 4));
         DisplayUtils.displayEndAlgorithm(binarySearch);
+
+        array = new Array(new int[]{5, 2, 4, 6, 1, 3});
+        InsertionSort insertionSort = new InsertionSort();
+
+        DisplayUtils.displayStartAlgorithm(insertionSort);
+        System.out.println("ORIGINAL ARRAY:");
+        array.display();
+
+        InsertionSort.sort(array);
+
+        System.out.println("SORTED ARRAY AFTER INSERTION SORT ALGORITHM (algorithm with complexity "+ insertionSort.getComplexity() +"):");
+        array.display();
+        DisplayUtils.displayEndAlgorithm(insertionSort);
     }
 }
