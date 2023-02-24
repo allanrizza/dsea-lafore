@@ -2,6 +2,7 @@ package algorithms;
 
 import algorithms.enums.ComplexityEnum;
 import datastructures.Array;
+import utils.DisplayUtils;
 
 /**
  * @author Allan G. Rizza
@@ -32,5 +33,20 @@ public class SelectionSort extends Algorithm {
             a[i] = a[min];
             a[min] = temp;
         }
+    }
+
+    public static void example() {
+        Array array = new Array(new int[]{5, 2, 4, 6, 1, 3});
+        SelectionSort selectionSort = new SelectionSort();
+
+        DisplayUtils.displayStartAlgorithm(selectionSort);
+        System.out.println("ORIGINAL ARRAY:");
+        array.display();
+
+        SelectionSort.sort(array);
+
+        System.out.println("SORTED ARRAY AFTER INSERTION SORT ALGORITHM (algorithm with complexity "+ selectionSort.getComplexity() +"):");
+        array.display();
+        DisplayUtils.displayEndAlgorithm(selectionSort);
     }
 }

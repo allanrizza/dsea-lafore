@@ -3,6 +3,7 @@ package algorithms;
 import algorithms.enums.ComplexityEnum;
 import algorithms.enums.InfoTypeEnum;
 import datastructures.Array;
+import utils.DisplayUtils;
 
 /**
  * The binary search algorithm to sorted arrays.
@@ -25,7 +26,7 @@ public class BinarySearch extends Algorithm {
      * @return Returns the array position of the number, if found. Otherwise, it returns {@code -1}.
      */
     public int find(Array array, int value) {
-        if(!array.isSorted()) throw new IllegalArgumentException();
+        if(!array.isSorted()) throw new IllegalArgumentException("The array isn't sorted");
         int curIn;
         int lowerBound = 0;
         int upperBound = array.getValues().length-1;
@@ -50,6 +51,17 @@ public class BinarySearch extends Algorithm {
                lowerBound = curIn+1;
             }
         }
+    }
+
+    public static void example() {
+        Array array = new Array(new int[]{1, 2, 4, 6, 8, 9});
+        BinarySearch binarySearch = new BinarySearch();
+        DisplayUtils.displayStartAlgorithm(binarySearch);
+        array.display();
+
+        System.out.println(binarySearch.find(array, 4));
+        System.out.println(binarySearch.getInfo().toString());
+        DisplayUtils.displayEndAlgorithm(binarySearch);
     }
 
 }

@@ -60,4 +60,6 @@ public abstract class Algorithm {
         this.getInfo().replace(InfoTypeEnum.STEPS, this.getInfo().get(InfoTypeEnum.STEPS) + 1);
         return this.getInfo();
     }
+
+    public static void example() {}
 }
