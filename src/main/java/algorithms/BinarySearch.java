@@ -13,7 +13,7 @@ public class BinarySearch extends Algorithm {
      */
     public BinarySearch() {
         this.setName("BINARY SEARCH");
-        this.setComplexity(ComplexityEnum.ON);
+        this.setComplexity(ComplexityEnum.OLOGN);
     }
 
     /**
