@@ -45,7 +45,7 @@ public class SelectionSort extends Algorithm {
 
         SelectionSort.sort(array);
 
-        System.out.println("SORTED ARRAY AFTER INSERTION SORT ALGORITHM (algorithm with complexity "+ selectionSort.getComplexity() +"):");
+        System.out.println("SORTED ARRAY AFTER SELECTION SORT ALGORITHM (algorithm with complexity "+ selectionSort.getComplexity() +"):");
         array.display();
         DisplayUtils.displayEndAlgorithm(selectionSort);
     }
