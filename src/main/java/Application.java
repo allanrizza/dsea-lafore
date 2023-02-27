@@ -1,5 +1,6 @@
 import algorithms.BinarySearch;
 import algorithms.BubbleSort;
+import algorithms.InsertionSort;
 import algorithms.SelectionSort;
 
 /**
@@ -12,5 +13,7 @@ public class Application {
         BinarySearch.example();
 
         SelectionSort.example();
+
+        InsertionSort.example();
     }
 }
