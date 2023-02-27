@@ -15,7 +15,7 @@ public class BinarySearch extends Algorithm {
      */
     public BinarySearch() {
         this.setName("BINARY SEARCH");
-        this.setComplexity(ComplexityEnum.ON);
+        this.setComplexity(ComplexityEnum.OLOGN);
         this.getInfo().put(InfoTypeEnum.COMPARISONS, 0L);
         this.getInfo().put(InfoTypeEnum.EXECUTION_TIME, 0L);
     }
