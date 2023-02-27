@@ -34,17 +34,17 @@ public class InsertionSort extends Algorithm {
     }
 
     public static void example() {
-        Array array = new Array(new int[]{5, 2, 4, 6, 1, 3, 6});
-        SelectionSort selectionSort = new SelectionSort();
+        Array array = new Array(new int[]{5, 2, 4, 6, 1, 3});
+        InsertionSort insertionSort = new InsertionSort();
 
-        DisplayUtils.displayStartAlgorithm(selectionSort);
+        DisplayUtils.displayStartAlgorithm(insertionSort);
         System.out.println("ORIGINAL ARRAY:");
         array.display();
 
         InsertionSort.sort(array);
 
-        System.out.println("SORTED ARRAY AFTER INSERTION SORT ALGORITHM (algorithm with complexity "+ selectionSort.getComplexity() +"):");
+        System.out.println("SORTED ARRAY AFTER INSERTION SORT ALGORITHM (algorithm with complexity "+ insertionSort.getComplexity() +"):");
         array.display();
-        DisplayUtils.displayEndAlgorithm(selectionSort);
+        DisplayUtils.displayEndAlgorithm(insertionSort);
     }
 }
