@@ -1,7 +1,4 @@
-import algorithms.BinarySearch;
-import algorithms.BubbleSort;
-import algorithms.InsertionSort;
-import algorithms.SelectionSort;
+import algorithms.*;
 
 /**
  * @author Allan G. Rizza
@@ -15,5 +12,7 @@ public class Application {
         SelectionSort.example();
 
         InsertionSort.example();
+
+        ObjectSort.example();
     }
 }
