@@ -13,6 +13,12 @@ public class Person {
 
     private int age;
 
+    /**
+     * Creates a Person Object with respective first name, last name and age.
+     * @param firstName The first name of the person.
+     * @param lastName The last name of the person.
+     * @param age The age of the person.
+     */
     public Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
