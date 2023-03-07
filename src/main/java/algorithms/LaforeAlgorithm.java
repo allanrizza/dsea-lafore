@@ -11,6 +11,10 @@ public class LaforeAlgorithm extends Algorithm {
         this.setName(null);
     }
 
+    /**
+     * Throws a new {@code RuntimeException} if an attempt is made to use {@code setComplexity} for a {@code LaforeAlgorithm}.
+     * @param complexity The complexity of the algorithm.
+     */
     @Override
     public void setComplexity(ComplexityEnum complexity) {
         throw new RuntimeException("ERROR: LAFORE'S ALGORITHMS CAN'T HAVE COMPLEXITY VALUES.");
