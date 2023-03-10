@@ -43,8 +43,8 @@ public class Stack {
     }
 
     /**
-     * This method removes the last value entered from the Stack.
-     * @return The new value at the {@code top} of the Stack.
+     * This method removes the most recently added value from the Stack.
+     * @return The removed value at the {@code top} of the Stack.
      */
     public long pop() {
         return stackArray[top--];
