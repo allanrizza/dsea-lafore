@@ -9,6 +9,11 @@ import utils.DisplayUtils;
  * @author Allan G. Rizza
  */
 public class ObjectSort extends LaforeAlgorithm {
+
+    ObjectSort() {
+        this.setName("OBJECT SORT");
+    }
+
     public void sort(Person[] persons) {
         for(int i = 1; i < persons.length; i++) {
             Person temp = persons[i];
