@@ -46,7 +46,11 @@ public class Stack {
      * This method removes the most recently added value from the Stack.
      * @return The removed value at the {@code top} of the Stack.
      */
-    public long pop() {
+    public Long pop() {
+        if(top == -1) {
+            System.out.println("Can't pop: stack is empty.");
+            return null;
+        }
         return stackArray[top--];
     }
 
