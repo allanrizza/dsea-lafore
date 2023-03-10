@@ -23,7 +23,7 @@ The project was created using Intellij IDEA Ultimate as IDE, Maven as build tool
 
 - #### Array (Data Structure)
 
-```
+```java
 public class Array {
     private int[] values;
 
@@ -57,7 +57,7 @@ public class Array {
 
 - #### Bubble Sort (Algorithm)
 
-```
+```java
   public class BubbleSort extends Algorithm {
   
     public BubbleSort() {
