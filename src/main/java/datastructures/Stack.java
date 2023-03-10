@@ -34,6 +34,7 @@ public class Stack {
 
     /**
      * This method pushes a value to the top of the stack.
+     * It is important to increment the {@code top} value before inserting the new value because if this is done the other way around, the algorithm will replace the existing element at the {@code top} position in the stack.
      * @param j The value to insert into the Stack.
      */
     public void push(long j) {
