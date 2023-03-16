@@ -5,29 +5,29 @@ import algorithms.LaforeAlgorithm;
 
 /**
  * A very simple utils class to display a nice visual presentation for an algorithm.
- * @author Allan G. Rizza
  */
-public class DisplayUtils {
-    public static void displayStartAlgorithm(Algorithm algorithm) {
-        if(algorithm instanceof LaforeAlgorithm)
-        {
-            System.out.println("================================= START LAFORE'S ALGORITHM " + algorithm.getName() + " ======================================");
-        }
-        else
-        {
-            System.out.println("================================= START " + algorithm.getName() + " ======================================");
-        }
+public final class DisplayUtils {
 
+    private static final String START_MESSAGE_PREFIX = "================================= START ";
+    private static final String END_MESSAGE_PREFIX = "================================== END ";
+    private static final String LAFORE_S_ALGORITHM = "LAFORE'S ALGORITHM";
+    private static final String MESSAGE_SEPARATOR = " =======================================\n\n\n";
+
+    private DisplayUtils() {
+        throw new AssertionError("Cannot instantiate this class.");
+    }
+
+    public static void displayStartAlgorithm(Algorithm algorithm) {
+        String startMessage = String.format("%s%s%s%s", START_MESSAGE_PREFIX,
+                algorithm instanceof LaforeAlgorithm ? LAFORE_S_ALGORITHM : "",
+                algorithm.getName(), MESSAGE_SEPARATOR);
+        System.out.println(startMessage);
     }
 
     public static void displayEndAlgorithm(Algorithm algorithm) {
-        if(algorithm instanceof LaforeAlgorithm)
-        {
-            System.out.println("================================== END LAFORE'S ALGORITHM " + algorithm.getName() + " =======================================\n\n\n");
-        }
-        else
-        {
-            System.out.println("================================== END " + algorithm.getName() + " =======================================\n\n\n");
-        }
+        String endMessage = String.format("%s%s%s%s", END_MESSAGE_PREFIX,
+                algorithm instanceof LaforeAlgorithm ? LAFORE_S_ALGORITHM : "",
+                algorithm.getName(), MESSAGE_SEPARATOR);
+        System.out.println(endMessage);
     }
 }
