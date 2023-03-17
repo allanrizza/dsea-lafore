@@ -4,10 +4,10 @@ import algorithms.enums.ComplexityEnum;
 import algorithms.enums.InfoTypeEnum;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * An abstract class for Algorithms.
- * @author Allan G. Rizza
  */
 public abstract class Algorithm {
     /**
@@ -23,7 +23,7 @@ public abstract class Algorithm {
     /**
      * Info about the algorithm. Example: number of steps and comparisons.
      */
-    private HashMap<InfoTypeEnum, Long> info;
+    private Map<InfoTypeEnum, Long> info;
 
     public Algorithm() {
         this.setInfo(new HashMap<>());
@@ -38,26 +38,28 @@ public abstract class Algorithm {
         this.name = name;
     }
 
-    public String getComplexity() {
-        return complexity.toString();
+    public ComplexityEnum getComplexity() {
+        return complexity;
     }
 
     public void setComplexity(ComplexityEnum complexity) {
         this.complexity = complexity;
     }
 
-    public HashMap<InfoTypeEnum, Long> getInfo(){
+    public Map<InfoTypeEnum, Long> getInfo() {
         return this.info;
     }
 
-    public void setInfo(HashMap<InfoTypeEnum, Long> info) {
+    public void setInfo(Map<InfoTypeEnum, Long> info) {
         this.info = info;
     }
 
-    public HashMap<InfoTypeEnum, Long> incrementInfo(InfoTypeEnum infoTypeEnum) {
-        if(!this.getInfo().containsKey(infoTypeEnum) || infoTypeEnum.equals(InfoTypeEnum.STEPS)) throw new IllegalArgumentException();
-        this.getInfo().replace(infoTypeEnum, this.getInfo().get(infoTypeEnum) + 1);
-        this.getInfo().replace(InfoTypeEnum.STEPS, this.getInfo().get(InfoTypeEnum.STEPS) + 1);
+    public Map<InfoTypeEnum, Long> incrementInfo(InfoTypeEnum infoType) {
+        if (infoType == InfoTypeEnum.STEPS) {
+            this.getInfo().compute(infoType, (k, v) -> v + 1);
+        } else {
+            this.getInfo().computeIfPresent(infoType, (k, v) -> v + 1);
+        }
         return this.getInfo();
     }
 
