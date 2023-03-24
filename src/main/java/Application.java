@@ -16,5 +16,11 @@ public class Application {
         ObjectSort.example();
 
         Reverser.example();
+        
+        BracketChecker bc = new BracketChecker("{[()]}");
+        
+        //BracketChecker bc = new BracketChecker("()[]{}");
+        
+        bc.check();
     }
 }
