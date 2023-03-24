@@ -14,5 +14,9 @@ public class Application {
         InsertionSort.example();
 
         ObjectSort.example();
+
+        BracketChecker bc = new BracketChecker("{[()]}");
+        //BracketChecker bc = new BracketChecker("()[]{}");
+        bc.check();
     }
 }
