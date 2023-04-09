@@ -9,14 +9,14 @@ public class Queue {
     private long[] values;
     private int front;
     private int rear;
-    private  int numItems;
+    private  int nItems;
 
     public Queue(int num) {
         this.maxSize = num;
         this.values = new long[maxSize];
         this.front = 0;
         this.rear = -1;
-        this.numItems = 0;
+        this.nItems = 0;
     }
 
     public void insert(int num) {
@@ -24,7 +24,7 @@ public class Queue {
             rear = -1;
         }
         this.values[++rear] = num;
-        numItems++;
+        nItems++;
     }
 
     public long remove() {
@@ -32,7 +32,7 @@ public class Queue {
         if(front == maxSize) {
             front = 0;
         }
-        numItems--;
+        nItems--;
         return temp;
     }
 
@@ -41,15 +41,15 @@ public class Queue {
     }
 
     public boolean isEmpty() {
-        return this.numItems == 0;
+        return this.nItems == 0;
     }
 
     public boolean isFull() {
-        return this.numItems == maxSize;
+        return this.nItems == maxSize;
     }
 
     public int size() {
-       return this.numItems;
+       return this.nItems;
     }
 
     public static void example() {
